@@ -378,7 +378,7 @@ export class FileUploader {
     }
     if (this.options.formatDataFunctionIsAsync) {
       sendable.then(
-        (result: any) => xhr.send(JSON.stringify(result))
+        (result: any) => xhr.send(result)
       );
     } else {
       xhr.send(sendable);
