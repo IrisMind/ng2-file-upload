@@ -296,7 +296,7 @@ var FileUploader = (function () {
             }
         };
         if (this.options.formatDataFunctionIsAsync) {
-            sendable.then(function (result) { return xhr.send(JSON.stringify(result)); });
+            sendable.then(function (result) { return xhr.send(result); });
         }
         else {
             xhr.send(sendable);
